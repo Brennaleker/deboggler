@@ -37,7 +37,7 @@ class SolutionsController < ApplicationController
       two_point: results.to_a.select {|x| x.length == 5}.sort,
       three_point: results.to_a.select {|x| x.length == 6}.sort,
       five_point: results.to_a.select {|x| x.length == 7}.sort,
-      # six point answers come in multiple lengths, sorting by length then alphabetically 
+      # six point answers come in multiple lengths, sorting by length then alphabetically
       six_point: results.to_a.select {|x| x.length > 7}.sort { |a, b| [a.size, a] <=> [b.size, b] }
     }
   end
@@ -66,6 +66,7 @@ class SolutionsController < ApplicationController
   end
 
   def find_neighbors(square)
+    # the eight possible neighbor directions from square
     neighbor_distances = [[1,0],[-1,0],[0, 1],[0, -1],[-1, -1], [1, -1], [1, 1], [-1, 1]]
     neighbor_distances.each do |dx, dy|
       nx = square[:location][0] + dx
