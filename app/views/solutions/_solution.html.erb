@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-sm-1 offset-sm-3">
+    <strong>1 point</strong>
+    <div class="sm-vert-space"></div>
+    <p ng-repeat="word in solutions['one_point']['three_letters']">
+      {{ word }}
+    </p>
+  </div>
+
+  <div class="col-sm-1">
+    <strong>1 point</strong>
+    <div class="sm-vert-space"></div>
+    <div class="sm-vert-space"></div>
+    <p ng-repeat="word in solutions['one_point']['four_letters']">
+      {{ word }}
+    </p>
+  </div>
+
+  <div class="col-sm-1">
+    <strong>2 points</strong>
+    <div class="sm-vert-space"></div>
+    <p ng-repeat="word in solutions['two_point']">
+      {{ word }}
+    </p>
+  </div>
+
+  <div class="col-sm-1">
+    <strong>3 points</strong>
+    <div class="sm-vert-space"></div>
+    <p ng-repeat="word in solutions['three_point']">
+      {{ word }}
+    </p>
+  </div>
+
+  <div class="col-sm-1">
+    <strong>5 points</strong>
+    <div class="sm-vert-space"></div>
+    <p ng-repeat="word in solutions['five_point']">
+      {{ word }}
+    </p>
+  </div>
+
+  <div class="col-sm-1">
+    <strong>6 points</strong>
+    <div class="sm-vert-space"></div>
+    <p ng-repeat="word in solutions['six_point']">
+      {{ word }}
+    </p>
+  </div>
+</div>

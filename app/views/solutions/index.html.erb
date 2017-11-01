@@ -1,0 +1,23 @@
+<div class="jumbotron center-text">
+  <h1>Dutiful Deboggler</h1>
+  <h3>helping you chea...erm check your answers since 2017</h3>
+</div>
+
+<div ng-controller="boggleSolverCtrl">
+  <p class='center-text' ng-repeat="row in boardInput track by $index">
+    <span ng-repeat="column in row track by $index">
+      <input type="text" ng-model="boardInput[$index][$parent.$index]">
+    </span>
+  </p>
+
+  <div class="center-text">
+    <button class="btn btn-primary" ng-click="solve()">Solve</button>
+  </div>
+  <div class="md-vert-space"></div>
+
+  <div class="center-text">
+    <h2>Solutions</h2>
+    <div class="sm-vert-space"></div>
+    <%= render partial: 'solution' %>
+  </div>
+</div>
