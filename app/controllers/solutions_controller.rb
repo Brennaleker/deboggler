@@ -84,7 +84,7 @@ class SolutionsController < ApplicationController
       y = 0
       row.each do |column|
         letter = {
-          letter: board_input[x][y],
+          letter: board_input[x][y].downcase,
           location: [x, y],
           neighbors: []
         }
